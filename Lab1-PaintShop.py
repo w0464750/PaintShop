@@ -1,26 +1,14 @@
-# LAB 1 - THE PAINT SHOP
-# Code a Python program that calculates the amount of paint you need to cover the walls in your family room. 
-# The salesperson at the home improvement store told you to buy 1 gallon of paint for every 150 square feet of 
-# wall you need to paint.
-
-# Assuming that the room is rectangular in shape, the program should take in as input the width of your 
-# two sets of walls and the height of the room.
-
-# The program should output the number of gallons required to paint the room. 
-# Paint is sold only by the gallon.
-
-#Purpose/Concepts: Input and output to screen, string concatentation, datatype casting, simple math operations
+import math
 
 def main():
     # YOUR CODE STARTS HERE, each line must be indented (one tab)
 
+  #Taking input from user
+  firstWallWidth = int(input("How many feet wide is your first wall?: "))
+  secondWallWidth = int(input("How many feet wide is your second wall?: "))
+  wallHeight = int(input("How many feet tall is your room?: "))
 
-
-
-
-
-
-
-    # YOUR CODE ENDS HERE
+  #Using a formatted string to calculate the square footage of all 4 walls, and then using math.ceil to always round up to the nearest full can
+  print(f'Your room has {2*firstWallWidth*wallHeight + 2*secondWallWidth*wallHeight} square feet of wall which requires {math.ceil((2*firstWallWidth*wallHeight + 2*secondWallWidth*wallHeight)/150)} cans to paint')
 
 main()
